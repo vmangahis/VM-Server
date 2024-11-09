@@ -34,14 +34,14 @@ namespace VM_Server.Migrations
                     b.Property<DateTime>("CreatedDateTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("EndDate")
-                        .HasColumnType("text");
+                    b.Property<DateOnly?>("EndDate")
+                        .HasColumnType("date");
 
                     b.Property<string>("RoleName")
                         .HasColumnType("text");
 
-                    b.Property<string>("StartDate")
-                        .HasColumnType("text");
+                    b.Property<DateOnly?>("StartDate")
+                        .HasColumnType("date");
 
                     b.HasKey("Id");
 
@@ -50,30 +50,30 @@ namespace VM_Server.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("07e0c23d-c4dd-4e27-b2d9-0e74284d7a79"),
+                            Id = new Guid("0a2ec8c1-7a2c-4b69-9db5-f847a9f5fb69"),
                             Company = "DepEd Biñan City Division Information Office",
-                            CreatedDateTime = new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(8266),
-                            EndDate = "July 2022",
+                            CreatedDateTime = new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(1562),
+                            EndDate = new DateOnly(2022, 7, 1),
                             RoleName = "Frontend Developer",
-                            StartDate = "April 2022"
+                            StartDate = new DateOnly(2022, 4, 1)
                         },
                         new
                         {
-                            Id = new Guid("ce2affed-4d36-462d-99dc-2479745c0c4a"),
+                            Id = new Guid("ab4535ed-bef5-411b-b61e-44ae40b942d8"),
                             Company = "Upwork",
-                            CreatedDateTime = new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(8273),
-                            EndDate = "January 2023",
+                            CreatedDateTime = new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(1571),
+                            EndDate = new DateOnly(2023, 1, 1),
                             RoleName = "Freelance Web Developer",
-                            StartDate = "September 2020"
+                            StartDate = new DateOnly(2020, 9, 1)
                         },
                         new
                         {
-                            Id = new Guid("cadb233f-013c-4a65-82f5-d1865c640595"),
+                            Id = new Guid("184f23b8-766a-4f39-a30c-c236bfcd5f12"),
                             Company = "Upwork",
-                            CreatedDateTime = new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(8277),
-                            EndDate = "January 2023",
+                            CreatedDateTime = new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(1575),
+                            EndDate = new DateOnly(2023, 1, 1),
                             RoleName = "Freelance Virtual Assistant",
-                            StartDate = "September 2020"
+                            StartDate = new DateOnly(2020, 9, 1)
                         });
                 });
 
@@ -102,32 +102,32 @@ namespace VM_Server.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("8436f29f-bd2d-4dad-9411-7377e62e688c"),
-                            CreatedDateTime = new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(7888),
+                            Id = new Guid("c8edb8be-5798-4579-8086-000714062317"),
+                            CreatedDateTime = new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(820),
                             ImageLink = "https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954820/vmdev/fcc_bi4o7r.png",
                             ProjectLink = "https://github.com/vmangahis/Four-Color-Conjecture-Game",
                             ProjectName = "Four Color Conjecture Game"
                         },
                         new
                         {
-                            Id = new Guid("aeff3345-8bcf-4aa1-b9fe-772c86a8abd0"),
-                            CreatedDateTime = new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(7902),
+                            Id = new Guid("c2ed6d10-4d43-4fe8-8c32-f3dc100c238b"),
+                            CreatedDateTime = new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(837),
                             ImageLink = "https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954822/vmdev/beowulf_tfac0o.png",
                             ProjectLink = "https://github.com/vmangahis/beowulf",
                             ProjectName = "Beowulf"
                         },
                         new
                         {
-                            Id = new Guid("97d21240-7664-4e61-ac7c-6165b9bc3828"),
-                            CreatedDateTime = new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(7906),
+                            Id = new Guid("259dc68f-e905-4d7e-9e9f-9ca9ccc0c8e3"),
+                            CreatedDateTime = new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(841),
                             ImageLink = "https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954820/vmdev/apt_jd51xf.png",
                             ProjectLink = "https://github.com/vmangahis/apartment-rental-system",
                             ProjectName = "Apartment Rental Management System"
                         },
                         new
                         {
-                            Id = new Guid("aa7a7e72-cfc2-4c6f-8665-9411bff2bdf6"),
-                            CreatedDateTime = new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(7910),
+                            Id = new Guid("fec3ee5d-578a-48b6-9cea-23f80914ff03"),
+                            CreatedDateTime = new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(844),
                             ImageLink = "https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954839/vmdev/kai_gb2jzi.png",
                             ProjectLink = "https://github.com/vmangahis/Kai",
                             ProjectName = "Kai"
@@ -159,29 +159,29 @@ namespace VM_Server.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f38508c1-df57-4885-852b-9aa0debff08f"),
-                            CreatedDateTime = new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(8135),
+                            Id = new Guid("9141b775-f42b-459d-8469-1a1b05e299b8"),
+                            CreatedDateTime = new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(1004),
                             SkillIdentifier = "msql_server",
                             SkillName = "Microsoft SQL Server"
                         },
                         new
                         {
-                            Id = new Guid("ca03be6c-f67d-40fe-882f-9847fb9e2352"),
-                            CreatedDateTime = new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(8139),
+                            Id = new Guid("4e2004ac-f795-4f0e-a2f6-69913969114e"),
+                            CreatedDateTime = new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(1009),
                             SkillIdentifier = "django",
                             SkillName = "Django"
                         },
                         new
                         {
-                            Id = new Guid("af917738-b231-45d7-86b5-1a735617e6c4"),
-                            CreatedDateTime = new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(8143),
+                            Id = new Guid("6ffe5b5b-1735-44ed-bd21-a83bcbb5e59b"),
+                            CreatedDateTime = new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(1013),
                             SkillIdentifier = "postgresql",
                             SkillName = "PostgreSQL"
                         },
                         new
                         {
-                            Id = new Guid("096e333d-81b0-47f4-847d-b64d225fb950"),
-                            CreatedDateTime = new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(8146),
+                            Id = new Guid("17e3e3bb-d431-4a40-ac8c-0b228163dc14"),
+                            CreatedDateTime = new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(1016),
                             SkillIdentifier = "dotnet",
                             SkillName = ".NET Core"
                         });

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace VM_Server.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialTableCreation : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,8 +19,8 @@ namespace VM_Server.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Company = table.Column<string>(type: "text", nullable: true),
-                    StartDate = table.Column<string>(type: "text", nullable: true),
-                    EndDate = table.Column<string>(type: "text", nullable: true),
+                    StartDate = table.Column<DateOnly>(type: "date", nullable: true),
+                    EndDate = table.Column<DateOnly>(type: "date", nullable: true),
                     RoleName = table.Column<string>(type: "text", nullable: true),
                     CreatedDateTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
@@ -64,9 +64,9 @@ namespace VM_Server.Migrations
                 columns: new[] { "Id", "Company", "CreatedDateTime", "EndDate", "RoleName", "StartDate" },
                 values: new object[,]
                 {
-                    { new Guid("07e0c23d-c4dd-4e27-b2d9-0e74284d7a79"), "DepEd Biñan City Division Information Office", new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(8266), "July 2022", "Frontend Developer", "April 2022" },
-                    { new Guid("cadb233f-013c-4a65-82f5-d1865c640595"), "Upwork", new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(8277), "January 2023", "Freelance Virtual Assistant", "September 2020" },
-                    { new Guid("ce2affed-4d36-462d-99dc-2479745c0c4a"), "Upwork", new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(8273), "January 2023", "Freelance Web Developer", "September 2020" }
+                    { new Guid("0a2ec8c1-7a2c-4b69-9db5-f847a9f5fb69"), "DepEd Biñan City Division Information Office", new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(1562), new DateOnly(2022, 7, 1), "Frontend Developer", new DateOnly(2022, 4, 1) },
+                    { new Guid("184f23b8-766a-4f39-a30c-c236bfcd5f12"), "Upwork", new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(1575), new DateOnly(2023, 1, 1), "Freelance Virtual Assistant", new DateOnly(2020, 9, 1) },
+                    { new Guid("ab4535ed-bef5-411b-b61e-44ae40b942d8"), "Upwork", new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(1571), new DateOnly(2023, 1, 1), "Freelance Web Developer", new DateOnly(2020, 9, 1) }
                 });
 
             migrationBuilder.InsertData(
@@ -74,10 +74,10 @@ namespace VM_Server.Migrations
                 columns: new[] { "Id", "CreatedDateTime", "ImageLink", "ProjectLink", "ProjectName" },
                 values: new object[,]
                 {
-                    { new Guid("8436f29f-bd2d-4dad-9411-7377e62e688c"), new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(7888), "https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954820/vmdev/fcc_bi4o7r.png", "https://github.com/vmangahis/Four-Color-Conjecture-Game", "Four Color Conjecture Game" },
-                    { new Guid("97d21240-7664-4e61-ac7c-6165b9bc3828"), new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(7906), "https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954820/vmdev/apt_jd51xf.png", "https://github.com/vmangahis/apartment-rental-system", "Apartment Rental Management System" },
-                    { new Guid("aa7a7e72-cfc2-4c6f-8665-9411bff2bdf6"), new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(7910), "https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954839/vmdev/kai_gb2jzi.png", "https://github.com/vmangahis/Kai", "Kai" },
-                    { new Guid("aeff3345-8bcf-4aa1-b9fe-772c86a8abd0"), new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(7902), "https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954822/vmdev/beowulf_tfac0o.png", "https://github.com/vmangahis/beowulf", "Beowulf" }
+                    { new Guid("259dc68f-e905-4d7e-9e9f-9ca9ccc0c8e3"), new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(841), "https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954820/vmdev/apt_jd51xf.png", "https://github.com/vmangahis/apartment-rental-system", "Apartment Rental Management System" },
+                    { new Guid("c2ed6d10-4d43-4fe8-8c32-f3dc100c238b"), new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(837), "https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954822/vmdev/beowulf_tfac0o.png", "https://github.com/vmangahis/beowulf", "Beowulf" },
+                    { new Guid("c8edb8be-5798-4579-8086-000714062317"), new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(820), "https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954820/vmdev/fcc_bi4o7r.png", "https://github.com/vmangahis/Four-Color-Conjecture-Game", "Four Color Conjecture Game" },
+                    { new Guid("fec3ee5d-578a-48b6-9cea-23f80914ff03"), new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(844), "https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954839/vmdev/kai_gb2jzi.png", "https://github.com/vmangahis/Kai", "Kai" }
                 });
 
             migrationBuilder.InsertData(
@@ -85,10 +85,10 @@ namespace VM_Server.Migrations
                 columns: new[] { "Id", "CreatedDateTime", "SkillDescription", "SkillIdentifier", "SkillName" },
                 values: new object[,]
                 {
-                    { new Guid("096e333d-81b0-47f4-847d-b64d225fb950"), new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(8146), null, "dotnet", ".NET Core" },
-                    { new Guid("af917738-b231-45d7-86b5-1a735617e6c4"), new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(8143), null, "postgresql", "PostgreSQL" },
-                    { new Guid("ca03be6c-f67d-40fe-882f-9847fb9e2352"), new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(8139), null, "django", "Django" },
-                    { new Guid("f38508c1-df57-4885-852b-9aa0debff08f"), new DateTime(2024, 11, 7, 16, 47, 0, 70, DateTimeKind.Utc).AddTicks(8135), null, "msql_server", "Microsoft SQL Server" }
+                    { new Guid("17e3e3bb-d431-4a40-ac8c-0b228163dc14"), new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(1016), null, "dotnet", ".NET Core" },
+                    { new Guid("4e2004ac-f795-4f0e-a2f6-69913969114e"), new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(1009), null, "django", "Django" },
+                    { new Guid("6ffe5b5b-1735-44ed-bd21-a83bcbb5e59b"), new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(1013), null, "postgresql", "PostgreSQL" },
+                    { new Guid("9141b775-f42b-459d-8469-1a1b05e299b8"), new DateTime(2024, 11, 9, 17, 35, 0, 483, DateTimeKind.Utc).AddTicks(1004), null, "msql_server", "Microsoft SQL Server" }
                 });
         }
 

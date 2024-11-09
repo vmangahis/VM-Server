@@ -6,10 +6,9 @@ namespace VM_Server.Extensions
 {
     public static class ServiceExtension
     {
-        public static void ConfigurePostgreSql(this IServiceCollection serv, IConfiguration conf) => serv.AddDbContext<RepositoryContext>(opt =>
-        {
-            opt.UseNpgsql(conf.GetConnectionString("localvm"));
-        });
+        public static void ConfigureSqlServer(this IServiceCollection serv) => 
+            serv.AddDbContext<RepositoryContext>(opt => opt.UseNpgsql(Environment.GetEnvironmentVariable("LOCALVM")));
+
         public static void ConfigureRepositoryManager(this IServiceCollection serv) => serv.AddScoped<IRepositoryManager, RepositoryManager>();
     }
 }

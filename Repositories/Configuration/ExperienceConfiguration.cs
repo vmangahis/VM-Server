@@ -13,8 +13,8 @@ namespace VM_Server.Repositories.Configuration
                 {
                     Id = new Guid(Guid.NewGuid().ToString()),
                     Company = "DepEd Biñan City Division Information Office",
-                    StartDate = "April 2022",
-                    EndDate = "July 2022",
+                    StartDate = new DateOnly(2022, 04, 01),
+                    EndDate = new DateOnly(2022, 07, 01),
                     RoleName = "Frontend Developer",
                     CreatedDateTime = DateTime.UtcNow
                 },
@@ -22,8 +22,8 @@ namespace VM_Server.Repositories.Configuration
                 {
                     Id = new Guid(Guid.NewGuid().ToString()),
                     Company = "Upwork",
-                    StartDate = "September 2020",
-                    EndDate = "January 2023",
+                    StartDate = new DateOnly(2020, 09, 01),
+                    EndDate = new DateOnly(2023, 01, 01),
                     RoleName = "Freelance Web Developer",
                     CreatedDateTime = DateTime.UtcNow
                 },
@@ -31,8 +31,8 @@ namespace VM_Server.Repositories.Configuration
                 {
                     Id = new Guid(Guid.NewGuid().ToString()),
                     Company = "Upwork",
-                    StartDate = "September 2020",
-                    EndDate = "January 2023",
+                    StartDate = new DateOnly(2020, 09, 01),
+                    EndDate = new DateOnly(2023, 01, 01),
                     RoleName = "Freelance Virtual Assistant",
                     CreatedDateTime = DateTime.UtcNow
                 }

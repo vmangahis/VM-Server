@@ -7,7 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.ConfigurePostgreSql(builder.Configuration);
+builder.Services.ConfigureSqlServer();
+
 builder.Services.ConfigureRepositoryManager();
 
 var app = builder.Build();
