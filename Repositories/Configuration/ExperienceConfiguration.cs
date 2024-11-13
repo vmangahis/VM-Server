@@ -35,7 +35,26 @@ namespace VM_Server.Repositories.Configuration
                     EndDate = new DateOnly(2023, 01, 01),
                     RoleName = "Freelance Virtual Assistant",
                     CreatedDateTime = DateTime.UtcNow
+                },
+                new Experiences
+                {
+                    Id = new Guid(Guid.NewGuid().ToString()),
+                    Company = "Infor PSSC Inc.",
+                    StartDate = new DateOnly(2023, 02, 13),
+                    EndDate = new DateOnly(2024, 06, 01),
+                    RoleName = "Associate Software Engineer",
+                    CreatedDateTime = DateTime.UtcNow
+                },
+                new Experiences
+                {
+                    Id = new Guid(Guid.NewGuid().ToString()),
+                    Company = "Infor PSSC Inc.",
+                    StartDate = new DateOnly(2023, 06, 01),
+                    EndDate = null,
+                    RoleName = "Software Engineer",
+                    CreatedDateTime = DateTime.UtcNow
                 }
+
              );
         }
     }

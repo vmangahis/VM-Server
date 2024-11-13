@@ -11,6 +11,10 @@ namespace VM_Server.Extensions
 
         public static void ConfigureRepositoryManager(this IServiceCollection serv) => serv.AddScoped<IRepositoryManager, RepositoryManager>();
 
-        public static void ConfigureCors(this IServiceCollection serv) => serv.AddCors();
+        public static void ConfigureCors(this IServiceCollection serv) => serv.AddCors(opt => {
+            opt.AddDefaultPolicy(builder => {
+                builder.SetIsOriginAllowed(orig => new Uri(orig).Host == "localhost" || new Uri(orig).Host == "vmangahis.github.io");
+            });
+        });
     }
 }

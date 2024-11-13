@@ -9,7 +9,10 @@ namespace VM_Server.Repositories
     {
         public ExperienceRepository(RepositoryContext repContext) : base(repContext) { }
 
-        public async Task<IEnumerable<Experiences>> GetExperiencesAsync(bool TrackChanges) => await GetAll(TrackChanges).ToListAsync();
+        public async Task<IEnumerable<Experiences>> GetExperiencesAsync(bool TrackChanges) => await 
+            GetAll(TrackChanges)
+            .OrderByDescending(e => e.StartDate)
+            .ToListAsync();
 
     }
 }

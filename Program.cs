@@ -29,6 +29,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://127.0.0.1:4200/VM-Dev/", "https://vmangahis.github.io/VM-Dev/", "https://localhost:4200/VM-Dev/"));
+app.UseCors();
 
 app.Run();
