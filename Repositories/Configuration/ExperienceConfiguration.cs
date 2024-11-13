@@ -49,7 +49,7 @@ namespace VM_Server.Repositories.Configuration
                 {
                     Id = new Guid(Guid.NewGuid().ToString()),
                     Company = "Infor PSSC Inc.",
-                    StartDate = new DateOnly(2023, 06, 01),
+                    StartDate = new DateOnly(2024, 06, 01),
                     EndDate = null,
                     RoleName = "Software Engineer",
                     CreatedDateTime = DateTime.UtcNow
